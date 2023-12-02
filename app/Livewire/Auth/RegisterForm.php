@@ -35,9 +35,8 @@ class RegisterForm extends Component
     )]
     public $password;
 
-    public function createAccount()
+    public function createAccount(): void
     {
-
         $this->validate();
         sleep(0.5);
 

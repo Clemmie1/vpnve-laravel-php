@@ -13,8 +13,8 @@
             </div>
         </div>
 
-        <button type="submit" class="btn btn-primary bg-gradient btn-lg w-100" wire:target="createAccount" wire:loading.remove>Sign up</button>
-        <button type="submit" class="btn btn-secondary btn-lg w-100" disabled wire:target="createAccount" wire:loading>
+        <button type="submit" class="btn btn-primary bg-gradient btn-lg w-100" wire:target="createAccount" wire:loading.remove style="height: 57.09px;">Sign up</button>
+        <button type="submit" class="btn btn-secondary btn-lg w-100" disabled wire:target="createAccount" wire:loading style="height: 57.09px;">
             <div class="col" style="display: flex; justify-content: center; align-items: center;">
                 <div class="sk-wave">
                     <div class="sk-wave-rect"></div>

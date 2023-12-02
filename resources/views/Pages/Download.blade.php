@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
 <head>
@@ -28,11 +27,11 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Vendor Styles -->
-    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css">
-    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" media="screen" href="{{asset('assets/vendor/boxicons/css/boxicons.min.css')}}">
+    <link rel="stylesheet" media="screen" href="{{asset('assets/vendor/swiper/swiper-bundle.min.css')}}">
 
     <!-- Main Theme Styles + Bootstrap -->
-    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+    <link rel="stylesheet" media="screen" href="{{asset('assets/css/theme.min.css')}}">
     @livewireStyles
     <!-- Page loading styles -->
     <style>
@@ -160,62 +159,41 @@
 
 
 <!-- Body -->
-<body>
+<body data-bs-theme="dark">
 
 <main class="page-wrapper">
 
     @extends('components.Header')
 
-    <section class="position-relative d-flex align-items-center min-vh-100 py-5 bg-dark overflow-hidden">
-        <span class="position-absolute top-0 start-0 d-dark-mode-block d-none w-100 h-100 bg-secondary opacity-75"></span>
-        <div class="container position-relative mt-5 mb-lg-5 mb-md-4 mb-3 pt-3 pb-xl-3" data-bs-theme="dark">
-            <div class="row gy-5">
-                <div class="col-xl-5 col-lg-6">
-                    <div class="position-relative zindex-5 text-lg-start text-center">
-                        <h1 class="display-1 mb-4 pb-lg-3 pb-md-2">Protect yourself with a <span class="text-gradient-primary">VPN</span></h1>
-                        <p class="mb-4 pb-lg-3 pb-md-2">
-                            <span class="me-2 text-light">Is maximum online anonymity and access to restricted resources important to you?</span>
-                        </p>
-                        <router-link :to="{name: 'auth.register'}"  class="btn btn-lg btn-primary text-uppercase w-50">Get a free VPN</router-link>
+    <section class="container py-5 mt-5 mt-md-4 mb-md-3 mb-lg-4 mb-xl-5">
+        <div class="row align-items-center align-items-lg-stretch mb-2 mb-sm-3">
+
+            <!-- Parallax gfx -->
+            <div class="col-xl-7 col-md-6 d-flex justify-content-center justify-content-md-end overflow-hidden order-md-2 mt-n5 mt-sm-n4 mt-md-0">
+                <div class="position-relative mt-5" style="max-width: 660px;">
+                    <div class="parallax zindex-2" style="transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; pointer-events: none;">
+                        <div class="parallax-layer zindex-2 mb-n3" data-depth="0.1" style="transform: translate3d(-1.4px, 0.4px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px;">
+                            <img src="https://preview.keenthemes.com/html/metronic/docs/assets/media/illustrations/unitedpalms-1/13.png" alt="Device">
+                        </div>
+
                     </div>
                 </div>
-                <div class="col-lg-6 offset-xl-1">
-                    <div class="position-relative ms-xl-0 ms-lg-4">
-                        <div class="position-absolute top-50 start-50 translate-middle ratio ratio-1x1" style="width: 125%; max-width: 49.75rem;">
-                            <div class="p-md-0 p-5">
-                                <img src="assets/img/landing/software-agency-3/hero-bg.png" alt="Shape" class="hero-animation-spin p-md-0 p-5">
-                            </div>
-                        </div>
-                        <div class="position-relative row row-cols-sm-2 row-cols-1 gx-xl-4 gx-lg-3 gx-md-4 gx-3">
-                            <div class="col">
-                                <div class="d-sm-grid d-flex gap-xl-4 gap-lg-3 gap-md-4 gap-sm-3 gap-2">
-                                    <div class="d-flex align-items-center justify-content-center bg-secondary rounded-3" style="min-height: 176px; backdrop-filter: blur(6px);">
-                                        <div class="p-xl-4 p-sm-3 p-2 fs-xl fw-semibold text-center">
-                                            <span class="hero-animation-fade text-white">Secure Access to the Internet</span>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-center bg-secondary rounded-3" style="min-height: 176px; backdrop-filter: blur(6px);">
-                                        <div class="p-xl-4 p-sm-3 p-2 fs-xl fw-semibold text-center">
-                                            <span class="hero-animation-fade hero-animation-delay-2 text-white">Reliable Infrastructure</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col mt-sm-5 mt-2 pt-sm-5">
-                                <div class="d-sm-grid d-flex gap-xl-4 gap-lg-3 gap-md-4 gap-sm-3 gap-2">
-                                    <div class="d-flex align-items-center justify-content-center bg-secondary rounded-3" style="min-height: 176px; backdrop-filter: blur(6px);">
-                                        <div class="p-xl-4 p-sm-3 p-2 fs-xl fw-semibold text-center">
-                                            <span class="hero-animation-fade hero-animation-delay-1 text-white">High-speed servers</span>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-center bg-secondary rounded-3" style="min-height: 176px; backdrop-filter: blur(6px);">
-                                        <div class="p-xl-4 p-sm-3 p-2 fs-xl fw-semibold text-center">
-                                            <span class="hero-animation-fade hero-animation-delay-3 text-white">Based on Outline</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            </div>
+
+            <!-- Text -->
+            <div class="col-xl-5 col-md-6 d-flex flex-column order-md-1">
+                <div class="text-center text-md-start pt-4 pt-sm-5 pt-xl-0 mt-2 mt-sm-0 mt-lg-auto">
+                    <h1 class="display-1 mb-4">Download <span class="text-gradient-primary">Outline</span><br> Client app</h1>
+                    <p class="fs-lg mb-0 d-md-none d-xl-block">Get the Outline Client App for desktop and mobile. Connect using your unique access key.</p>
+                    <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start pt-2 mt-4 mt-md-5">
+                        <button type="button" onclick="location.href='https://play.google.com/store/apps/details?id=org.outline.android.client'" class="btn btn-secondary btn-lg me-sm-3 me-lg-4 text-uppercase">
+                            <i class='bx bxl-android fs-3 me-2'></i>
+
+                        </button>
+                        <button type="button" onclick="location.href='https://s3.amazonaws.com/outline-releases/client/windows/stable/Outline-Client.exe'" class="btn btn-secondary btn-lg me-sm-3 me-lg-4  text-uppercase">
+                            <i class='bx bxl-windows fs-3 me-2'></i>
+                            Windows
+                        </button>
                     </div>
                 </div>
             </div>
@@ -235,8 +213,31 @@
 
 <!-- Main Theme Script -->
 <script src="{{asset('assets/js/theme.min.js')}}" data-navigate-track></script>
-
-
-
 </body>
 </html>
+
+{{--<div class="col py-1 my-2 my-sm-3">
+    <div href="services-single-v1.html" class="card  h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 me-xl-2">
+        <div class="card-body pt-3">
+            <div class="d-inline-block rounded-3 position-absolute top-0 translate-middle-y">
+                <img src="https://flagicons.lipis.dev/flags/4x3/de.svg" class="d-block m-1 rounded-1" width="70" alt="Icon">
+            </div>
+            <h2 class="h4 d-inline-flex align-items-center">
+                <span class="me-3">Canada</span><span class="text-muted">#1</span>
+            </h2>
+
+        </div>
+
+        <div class="card-footer">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <button type="button" class="btn btn-secondary text-uppercase">Generate key</button>
+                </div>
+                <div>
+                    <span class="badge bg-faded-success text-success">ONLINE</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>--}}

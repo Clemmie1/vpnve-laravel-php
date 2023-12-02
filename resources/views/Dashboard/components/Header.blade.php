@@ -1,4 +1,4 @@
-<header class="header navbar navbar-expand-lg navbar-dark position-absolute navbar-sticky">
+<header class="header navbar navbar-expand-lg bg-light border-bottom border-light shadow-sm fixed-top">
     <div class="container px-3">
         <a style="cursor: pointer;" onclick="location.href='{{route('home')}}'" class="navbar-brand pe-3">
             <svg xmlns="http://www.w3.org/2000/svg" width="46" height="48" viewBox="0 0 46 48" fill="none">
@@ -9,10 +9,10 @@
                 <path d="M35.5488 16.368L24.5671 10.4688V-4.67422e-06L45.3334 11.1215V33.3646L35.5488 28.1182V16.368Z" fill="#6D63F2"/>
             </svg>
         </a>
-        <div id="navbarNav" class="offcanvas offcanvas-end bg-dark">
-            <div class="offcanvas-header border-bottom border-light">
-                <h5 class="offcanvas-title text-white">Menu</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+                <h5 class="offcanvas-title">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-uppercase">
@@ -27,32 +27,18 @@
                     </li>
                 </ul>
             </div>
-            <div class="offcanvas-header border-top border-light">
-                @if(\Illuminate\Support\Facades\Auth::check())
-                    <a onclick="location.href='{{route('dashboard.home')}}'" class="btn btn-primary w-100">
-                        Dashboard
-                    </a>
-                @else
-                    <a href="" class="btn btn-primary w-100 text-uppercase">
-                        Sign in
-                    </a>
-                @endif
+            <div class="offcanvas-header border-top">
+                <button onclick="location.href='{{route('auth.logout')}}'" class="btn btn-primary w-100 text-uppercase">
+                    Sign Out
+                </button>
             </div>
         </div>
 
         <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
-        @if(\Illuminate\Support\Facades\Auth::check())
-            <a onclick="location.href='{{route('dashboard.home')}}'" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex text-uppercase">
-                Dashboard
-            </a>
-        @else
-            <a onclick="location.href='{{route('auth.login')}}'"  class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex text-uppercase">
-                Sign in
-            </a>
-        @endif
-
+        <button onclick="location.href='{{route('auth.logout')}}'" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex text-uppercase">
+            Sign Out
+        </button>
     </div>
 </header>

@@ -29,6 +29,9 @@
     <link rel="stylesheet" media="screen" href="{{asset('assets/vendor/boxicons/css/boxicons.min.css')}}">
     <link rel="stylesheet" media="screen" href="{{asset('assets/vendor/swiper/swiper-bundle.min.css')}}">
     <link rel="stylesheet" media="screen" href="{{asset('assets/css/theme.min.css')}}">
+    <link rel="stylesheet" media="screen" href="{{asset('assets/css/spinkit.css')}}">
+
+    <link href="https://cdn.jsdelivr.net/npm/vue3-toastify@0.1.14/dist/index.min.css" rel="stylesheet">
 @livewireStyles
 </head>
 <body data-bs-theme="dark">
@@ -41,7 +44,7 @@
                 <div class="w-100 align-self-end pt-1 pt-md-4 pb-4" style="max-width: 526px;">
                     <h1 class="text-center text-xl-start">Welcome Back</h1>
                     <p class="text-center text-xl-start pb-3 mb-3">Don’t have an account yet? <a href="{{route('auth.register')}}" wire:navigate style="text-decoration: none;">Register here.</a></p>
-
+                    @livewire("auth.login-form")
                 </div>
                 <div class="w-100 align-self-center justify-content-center">
                     <p class="nav d-block fs-xs text-center text-xl-start pb-2 mb-0">
@@ -53,7 +56,6 @@
     </main>
 
     @livewireScripts
-
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <x-livewire-alert::scripts />
@@ -65,6 +67,7 @@
     <script src="{{asset('assets/vendor/lightgallery/plugins/video/lg-video.min.js')}}"></script>
     <script src="{{asset('assets/vendor/imagesloaded/imagesloaded.pkgd.min.js')}}"></script>
     <script src="{{asset('assets/vendor/shufflejs/dist/shuffle.min.js')}}"></script>
+
 
 </body>
 </html>
