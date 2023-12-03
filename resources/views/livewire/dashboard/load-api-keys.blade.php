@@ -31,16 +31,15 @@
             <li class="d-flex align-items-center justify-content-between mb-4">
                 <div class="d-flex align-items-start ">
                     <div class="ps-0">
-                        <span class="d-inline-block fs-sm text-muted me-2">{{$getKey}}</span>
+                        <span id="key" class="d-inline-block fs-sm text-muted me-2">{{$getKey}}</span>
                         <span>
-                            <i class="bx bx-copy fs-xl text-primary"></i>
+                            <i style="cursor: pointer;" onclick="copyCode()" class="bx bx-copy fs-xl text-primary"></i>
+                            <i style="cursor: pointer;" wire:click="deleteApiKey" class="bx bx-trash-alt fs-xl text-danger"></i>
                         </span>
                     </div>
                 </div>
-                <button wire:click="deleteApiKey" type="button" class="btn btn-outline-danger px-3 px-sm-4">
-                    <span class="d-none d-sm-inline">Remove</span>
-                </button>
             </li>
         </ul>
     @endif
+
 </div>

@@ -2,8 +2,11 @@
 
 use Acamposm\Ping\Ping;
 use Acamposm\Ping\PingCommandBuilder;
+use App\Models\VpnKey;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use OutlineApiClient\OutlineApiClient;
+use OutlineApiClient\OutlineKey;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,4 +58,16 @@ Route::group(['middleware' => ['auth']], function (){
     Route::get('/dashboard/api', function () {
         return view('Dashboard.HomeAndApiKeys');
     })->name('dashboard.api');
+
+    Route::get('/test', function (){
+
+        $get = VpnKey::query()->find(1);
+
+        if ($get){
+            $get->delete();
+        } else {
+            return 'notFound';
+        }
+
+    });
 });

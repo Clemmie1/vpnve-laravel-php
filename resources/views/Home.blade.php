@@ -1,40 +1,26 @@
 
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="utf-8">
     <title>VPNve</title>
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Silicon - Multipurpose Technology Bootstrap Template">
-    <meta name="keywords" content="bootstrap, business, creative agency, mobile app showcase, saas, fintech, finance, online courses, software, medical, conference landing, services, e-commerce, shopping cart, multipurpose, shop, ui kit, marketing, seo, landing, blog, portfolio, html5, css3, javascript, gallery, slider, touch, creative">
-    <meta name="author" content="Createx Studio">
-
-    <!-- Viewport -->
+    <meta name="description" content="Free Protect yourself with a VPN">
+    <meta name="keywords" content="vpn, free, free vpn, network, protect, free, VPN, впн">
+    <meta name="author" content="VVpro">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Theme switcher (color modes) -->
-    <script src="assets/js/theme-switcher.js"></script>
-
-    <!-- Favicon and Touch Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
-    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <script src="{{asset('assets/js/theme-switcher.js')}}"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('assets/favicon/apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('assets/favicon/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/favicon/favicon-16x16.png')}}">
+    <link rel="shortcut icon" href="{{asset('assets/favicon/favicon.ico')}}">
     <meta name="msapplication-TileColor" content="#080032">
     <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="dark">
+    <link rel="stylesheet" media="screen" href="{{asset('assets/vendor/boxicons/css/boxicons.min.css')}}">
+    <link rel="stylesheet" media="screen" href="{{asset('assets/vendor/swiper/swiper-bundle.min.css')}}">
+    <link rel="stylesheet" media="screen" href="{{asset('assets/css/theme.min.css')}}">
 
-    <!-- Vendor Styles -->
-    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css">
-    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
-
-    <!-- Main Theme Styles + Bootstrap -->
-    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
-    @livewireStyles
-    <!-- Page loading styles -->
     <style>
         .page-loading {
             position: fixed;
@@ -176,7 +162,7 @@
                         <p class="mb-4 pb-lg-3 pb-md-2">
                             <span class="me-2 text-light">Is maximum online anonymity and access to restricted resources important to you?</span>
                         </p>
-                        <router-link :to="{name: 'auth.register'}"  class="btn btn-lg btn-primary text-uppercase w-50">Get a free VPN</router-link>
+                        <button onclick="location.href='{{route('auth.login')}}'" class="btn btn-lg btn-primary text-uppercase w-50">Get a free VPN</button>
                     </div>
                 </div>
                 <div class="col-lg-6 offset-xl-1">
@@ -223,18 +209,14 @@
     </section>
 </main>
 
-@livewireScripts
-<script src="{{asset('assets/vendor/jarallax/dist/jarallax.min.js')}}" data-navigate-track></script>
-<script src="{{asset('assets/vendor/@lottiefiles/lottie-player/dist/lottie-player.js')}}" data-navigate-track></script>
-<script src="{{asset('assets/vendor/swiper/swiper-bundle.min.js')}}" data-navigate-track></script>
-<script src="{{asset('assets/vendor/lightgallery/lightgallery.min.js')}}" data-navigate-track></script>
-<script src="{{asset('assets/vendor/lightgallery/plugins/video/lg-video.min.js')}}" data-navigate-track></script>
-<script src="{{asset('assets/vendor/imagesloaded/imagesloaded.pkgd.min.js')}}" data-navigate-track></script>
-<script src="{{asset('assets/vendor/shufflejs/dist/shuffle.min.js')}}" data-navigate-track></script>
-
-
-<!-- Main Theme Script -->
-<script src="{{asset('assets/js/theme.min.js')}}" data-navigate-track></script>
+<script src="{{asset('assets/vendor/jarallax/dist/jarallax.min.js')}}"></script>
+<script src="{{asset('assets/vendor/@lottiefiles/lottie-player/dist/lottie-player.js')}}"></script>
+<script src="{{asset('assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
+<script src="{{asset('assets/vendor/lightgallery/lightgallery.min.js')}}"></script>
+<script src="{{asset('assets/vendor/lightgallery/plugins/video/lg-video.min.js')}}"></script>
+<script src="{{asset('assets/vendor/imagesloaded/imagesloaded.pkgd.min.js')}}"></script>
+<script src="{{asset('assets/vendor/shufflejs/dist/shuffle.min.js')}}"></script>
+<script src="{{asset('assets/js/theme.min.js')}}"></script>
 
 
 

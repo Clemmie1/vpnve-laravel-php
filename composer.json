@@ -8,6 +8,7 @@
         "php": "^8.1",
         "acamposm/ping": "^2.1",
         "guzzlehttp/guzzle": "^7.2",
+        "intensa/outline-api-client": "^1.0",
         "jantinnerezo/livewire-alert": "^3.0",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
