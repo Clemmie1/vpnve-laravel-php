@@ -5,6 +5,7 @@ use Acamposm\Ping\PingCommandBuilder;
 use App\Models\VpnKey;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use Nette\Utils\Random;
 use OutlineApiClient\OutlineApiClient;
 use OutlineApiClient\OutlineKey;
 
@@ -61,13 +62,7 @@ Route::group(['middleware' => ['auth']], function (){
 
     Route::get('/test', function (){
 
-        $get = VpnKey::query()->find(1);
-
-        if ($get){
-            $get->delete();
-        } else {
-            return 'notFound';
-        }
+       return Random::generate(6);
 
     });
 });

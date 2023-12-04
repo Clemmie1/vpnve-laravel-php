@@ -25,6 +25,9 @@
                         <p>
                             This server has unlimited traffic.
                         </p>
+                        <p>
+                            {{ $lists['host'] }}
+                        </p>
                     </div>
 
                     <div class="card-footer">
@@ -37,7 +40,13 @@
                             </div>
                             <div>
                                 <span class="badge bg-faded-success text-success">ONLINE</span>
-                                <span class="badge bg-faded-success text-success">{{ \App\Http\Controllers\PingHostContoller::getPingHoist($lists['ip'], $lists['port'], 10) }}ms</span>
+                                <span class="badge bg-faded-success text-success">
+                                    @if($get = \App\Http\Controllers\PingHostContoller::getPingHoist($lists['ip'], $lists['port'], 10))
+                                        {{$get}}ms
+                                    @else
+                                        0ms
+                                    @endif
+                                </span>
                             </div>
                         </div>
                     </div>

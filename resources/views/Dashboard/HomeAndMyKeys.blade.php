@@ -177,7 +177,6 @@
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <x-livewire-alert::scripts />
-
 <script src="{{asset('assets/vendor/jarallax/dist/jarallax.min.js')}}"></script>
 <script src="{{asset('assets/vendor/@lottiefiles/lottie-player/dist/lottie-player.js')}}"></script>
 <script src="{{asset('assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
@@ -186,8 +185,19 @@
 <script src="{{asset('assets/vendor/imagesloaded/imagesloaded.pkgd.min.js')}}"></script>
 <script src="{{asset('assets/vendor/shufflejs/dist/shuffle.min.js')}}"></script>
 <script src="{{asset('assets/js/theme.min.js')}}"></script>
+<script>
+    function copyCode(accessKey) {
+        var tempTextarea = document.createElement('textarea');
 
-@stack('ss')
+        tempTextarea.value = accessKey;
+        document.body.appendChild(tempTextarea);
+        tempTextarea.select();
+        tempTextarea.setSelectionRange(0, 99999);
+        document.execCommand('copy');
+        document.body.removeChild(tempTextarea);
+        alert('Key copied!');
+    }
+</script>
 
 </body>
 </html>

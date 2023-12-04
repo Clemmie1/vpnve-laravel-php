@@ -4,35 +4,21 @@
 <head>
     <meta charset="utf-8">
     <title>VPNve Server List</title>
-
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Silicon - Multipurpose Technology Bootstrap Template">
-    <meta name="keywords" content="bootstrap, business, creative agency, mobile app showcase, saas, fintech, finance, online courses, software, medical, conference landing, services, e-commerce, shopping cart, multipurpose, shop, ui kit, marketing, seo, landing, blog, portfolio, html5, css3, javascript, gallery, slider, touch, creative">
-    <meta name="author" content="Createx Studio">
-
-    <!-- Viewport -->
+    <meta name="description" content="Free Protect yourself with a VPN">
+    <meta name="keywords" content="vpn, free, free vpn, network, protect, free, VPN, впн">
+    <meta name="author" content="VVpro">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Theme switcher (color modes) -->
-    <script src="assets/js/theme-switcher.js"></script>
-
-    <!-- Favicon and Touch Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
-    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <script src="{{asset('assets/js/theme-switcher.js')}}"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('assets/favicon/apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('assets/favicon/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/favicon/favicon-16x16.png')}}">
+    <link rel="shortcut icon" href="{{asset('assets/favicon/favicon.ico')}}">
     <meta name="msapplication-TileColor" content="#080032">
     <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-
-    <!-- Vendor Styles -->
-    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css">
-    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
-
-    <!-- Main Theme Styles + Bootstrap -->
-    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+    <meta name="theme-color" content="dark">
+    <link rel="stylesheet" media="screen" href="{{asset('assets/vendor/boxicons/css/boxicons.min.css')}}">
+    <link rel="stylesheet" media="screen" href="{{asset('assets/vendor/swiper/swiper-bundle.min.css')}}">
+    <link rel="stylesheet" media="screen" href="{{asset('assets/css/theme.min.css')}}">
     @livewireStyles
     <!-- Page loading styles -->
     <style>
@@ -174,8 +160,6 @@
                 <div class="row justify-content-center text-center pt-4 pb-sm-2 py-lg-5">
                     <div class="col-xl-8 col-lg-9 col-md-10 py-5">
                         <h1 class="display-1 text-light pt-sm-2 pb-1 pb-sm-3 mb-3">Server <span class="text-gradient-primary">VPN</span> List</h1>
-                        <p class="fs-lg text-light opacity-70 pb-2 pb-sm-0 mb-4 mb-sm-5">We offer you a new generation of task and project management system. Plan, manage and track all your tasks in one flexible software!</p>
-                        <a href="#" class="btn btn-primary shadow-primary btn-lg">Get early access</a>
                     </div>
                 </div>
             </div>

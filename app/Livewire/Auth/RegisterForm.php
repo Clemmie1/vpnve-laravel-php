@@ -45,17 +45,11 @@ class RegisterForm extends Component
                 'username' => $this->username,
                 'password' => bcrypt($this->password),
             ]);
-
-            $this->alert('success', "<a class='text-muted' style='font-weight: bold;'>Подтверждение отправлено</a>", [
-                'position' => 'bottom-end',
-                'timer' => 3000,
-                'width' => '300',
-                'toast' => true,
-            ]);
-
+            Auth::attempt($user);
+            $this->redirect(route('dashboard.home'));
 
         } catch (QueryException $e) {
-            $this->alert('error', "<a class='text-muted' style='font-weight: bold;'>Почта занята</a>", [
+            $this->alert('error', "<a class='text-muted' style='font-weight: bold;'>no</a>", [
                 'position' => 'bottom-end',
                 'timer' => 3000,
                 'width' => '300',

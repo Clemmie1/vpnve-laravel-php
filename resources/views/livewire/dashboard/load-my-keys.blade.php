@@ -29,17 +29,26 @@
                         </div>
 
                     </div>
+                    <input type="hidden" id="accessKey" value="{{$list['vpn_access_url']}}">
                     <div class="pt-3 pt-sm-0">
                         <div class="d-flex justify-content-end">
                             <div wire:loading.remove>
-                                <button wire:click="deleteKey({{$list['id']}})" type="button" class="btn btn-outline-danger px-3 px-xl-4">
+                                <button type="button" onclick="copyCode('{{$list['vpn_access_url']}}')" class="btn btn-outline-secondary px-3 px-xl-3 me-1">
+                                    <i class="bx bx-copy fs-xl me-lg-1 me-xl-2"></i>
+                                    <span class="d-none d-lg-inline">Copy key</span>
+                                </button>
+                                <button x-on:click="$wire.deleteKey({{$list['id']}})" x-clipboard="dsadsa" type="button" class="btn btn-outline-danger px-3 px-xl-3">
                                     <i class="bx bx-trash-alt fs-xl me-lg-1 me-xl-2"></i>
                                     <span class="d-none d-lg-inline">Delete</span>
                                 </button>
                             </div>
 
                             <div wire:loading>
-                                <button disabled type="button" class="btn btn-outline-danger px-3 px-xl-4">
+                                <button type="button" onclick="copyCode('{{$list['vpn_access_url']}}')" class="btn btn-outline-secondary px-3 px-xl-3 me-1">
+                                    <i class="bx bx-copy fs-xl me-lg-1 me-xl-2"></i>
+                                    <span class="d-none d-lg-inline">Copy key</span>
+                                </button>
+                                <button disabled type="button" class="btn btn-outline-danger px-3 px-xl-3">
                                     <i class="bx bx-trash-alt fs-xl me-lg-1 me-xl-2"></i>
                                     <span class="d-none d-lg-inline">Delete</span>
                                 </button>
@@ -48,28 +57,12 @@
                     </div>
                 </div>
                 <div class="mt-3 fs-6 text-muted">
-                    {{ $list['vpn_access_url'] }}
+                    <button onclick="location.href='{{$list['vpn_access_url']}}'" class="w-100 btn btn-secondary">
+                        Open in app
+                    </button>
+
                 </div>
             </div>
         @endforeach
     @endif
-        @if($showModalConnect)
-            <div class="modal fade show" id="modalCentered" tabindex="-11" style="display: block;" aria-modal="true" role="dialog">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Modal title</h5>
-                            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <p>{{ $url_connect }}</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-secondary btn-sm" type="button" data-bs-dismiss="modal">Close</button>
-                            <button class="btn btn-primary btn-sm" type="button">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        @endif
 </div>

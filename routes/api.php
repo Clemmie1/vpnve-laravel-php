@@ -14,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+
+
+
+
+Route::middleware('api.key')->group(function () {
+    Route::get('/v1/serverList', [App\Http\Controllers\API\GetServerList::class, 'getList']);
+    Route::post('/v1/createKey', [App\Http\Controllers\API\CoreApiKey::class, 'createKey']);
+    Route::get('/v1/getKey', [App\Http\Controllers\API\CoreApiKey::class, 'getKey']);
+    Route::delete('/v1/deleteKey', [App\Http\Controllers\API\CoreApiKey::class, 'deleteKey']);
 });

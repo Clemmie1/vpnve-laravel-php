@@ -36,6 +36,11 @@ class LoadMyKeys extends Component
         }
     }
 
+    public function copyKey()
+    {
+        return $this->dispatch('refresh-products');
+    }
+
     public function closeModal()
     {
         $this->showModalConnect = false;

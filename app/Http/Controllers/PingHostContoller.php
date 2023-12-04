@@ -10,7 +10,9 @@ class PingHostContoller extends Controller
     {
         $tB = microtime(true);
         $fP = fSockOpen($host, $port,$timeout);
-        if (!$fP) { return false; }
+        if (!$fP) {
+            return false;
+        }
         $tA = microtime(true);
         return round((($tA - $tB) * 1000), 0);
     }
